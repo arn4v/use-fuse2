@@ -2,5 +2,5 @@
   "compilerOptions": {
     "moduleResolution": "node"
   },
-  "include": ["index.ts"]
+  "include": ["src/index.ts"]
 }
