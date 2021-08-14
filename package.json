@@ -5,11 +5,11 @@
   "license": "MIT",
   "author": "Arnav Gosain <arnav@arnavgosain.com>",
   "source": "index.ts",
-  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsup index.ts --target esnext --dts --minify --external react --format esm,cjs",
-    "dev": "npm run build -- --watch"
+    "build": "microbundle --external react --compress --no-sourcemap -f modern,esm,umd -o dist",
+    "dev": "microbundle watch --external react --compress --no-sourcemap -f modern,esm,umd -o dist"
   },
   "dependencies": {
     "fuse.js": "^6.4.6",
