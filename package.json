@@ -1,0 +1,24 @@
+{
+  "name": "use-fuse2",
+  "description": "React hook for Fuse.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Arnav Gosain <arnav@arnavgosain.com>",
+  "source": "index.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsup index.ts --target esnext --dts --minify --external react --format esm,cjs",
+    "dev": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "fuse.js": "^6.4.6",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.17",
+    "microbundle": "^0.13.3",
+    "rimraf": "^3.0.2",
+    "tsup": "^4.13.1"
+  }
+}
